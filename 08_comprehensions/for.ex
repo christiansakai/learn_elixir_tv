@@ -15,7 +15,7 @@ defmodule For do
 
   ## Examples
 
-      For.even_numbers_between(1, 10)
+      iex> For.even_numbers_between(1, 10)
       [2, 4, 6, 8, 10]
   """
   @spec even_numbers_between(integer(), integer()) :: [integer()]
@@ -38,7 +38,7 @@ defmodule For do
 
   ## Examples
   
-      For.join_list(["I", "love", "You"], " ")
+      iex> For.join_list(["I", "love", "You"], " ")
       "I love You "
   """
   @spec join_list([binary()], binary()) :: binary()

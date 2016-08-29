@@ -21,6 +21,23 @@ defmodule EnumStream do
 
   @doc """
   Writes twelve months in a year each line.
+
+  ## Examples
+  
+      iex>EnumStream.months()
+      January
+      February
+      March
+      April
+      May
+      June
+      July
+      August
+      September
+      October
+      November
+      December   
+      :ok
   """
   @spec months :: :ok
   def months do
@@ -33,6 +50,19 @@ defmodule EnumStream do
   Read "sample.txt" and writes every other
   word which startds with "d", sorted by
   length and capitalized.
+
+  ## Examples
+
+      iex> EnumStream.read_sample()
+      Desk
+      Drum
+      Dung
+      Dress
+      Drill
+      Drink
+      Diamond
+      Data base
+      :ok
   """
   @spec read_sample :: :ok
   def read_sample do

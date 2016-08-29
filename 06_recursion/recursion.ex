@@ -15,9 +15,9 @@ defmodule Recursion do
 
   ## Examples
   
-      Recursion.sum([1, 2, 3])
+      iex> Recursion.sum([1, 2, 3])
       6
-      Recursion.sum([1, 2, 3], fn x -> x * x end)
+      iex> Recursion.sum([1, 2, 3], fn x -> x * x end)
       14
   """
   @spec sum([number()], (number() -> number())) :: number()
@@ -39,7 +39,7 @@ defmodule Recursion do
 
   ## Examples
   
-      Recursion.reverse([1, 2, 3])
+      iex> Recursion.reverse([1, 2, 3])
       [3, 2, 1]
   """
   @spec reverse(list()) :: list()

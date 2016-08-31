@@ -1,8 +1,8 @@
-defmodule TodoList.Mixfile do
+defmodule Todo.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :todo_list,
+    [app: :todo,
      version: "0.1.0",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
@@ -15,7 +15,7 @@ defmodule TodoList.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     [applications: [:logger],
-     mod: {TodoList, []}]
+     mod: {Todo, []}]
   end
 
   # Dependencies can be Hex packages:
@@ -28,6 +28,7 @@ defmodule TodoList.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:mix_test_watch, "~> 0.2.6"},
+     {:dialyxir, "~> 0.3.5"}]
   end
 end

@@ -10,8 +10,6 @@ defmodule MyCustomExceptionTest do
       exception ->
         assert exception == %MyCustomException{code: 1, 
                                                message: "Exception!"}
-
-
     end
   end
 end

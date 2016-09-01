@@ -9,7 +9,8 @@ defmodule Todo do
     # Define workers and child supervisors to be supervised
     children = [
       # Starts a worker by calling: Todo.Worker.start_link(arg1, arg2, arg3)
-      # worker(Todo.Todo, []),
+      worker(Todo.Cache, []),
+      supervisor(Todo.Server, []),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

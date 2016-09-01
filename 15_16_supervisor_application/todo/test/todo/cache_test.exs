@@ -4,14 +4,15 @@ defmodule Todo.CacheTest do
   alias Todo.Cache
 
   setup do
-    list = %{name: "Home", items: []}
+    list = %{name: "Test", items: []}
     Cache.save(list)
 
     {:ok, list: list}
   end
-
+  
   test ".save adds a list to the ETS table" do
     info = :ets.info(Cache)
+
     assert info[:size] == 1
   end
 

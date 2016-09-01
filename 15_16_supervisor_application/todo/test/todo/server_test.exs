@@ -11,7 +11,7 @@ defmodule Todo.ServerTest do
     end
   end
 
-  test ".add_list adds a new supervised todo list" do
+  test ".add_list ads a new supervised todo list" do
     Server.add_list("Home")
     Server.add_list("Work")
 
@@ -30,7 +30,6 @@ defmodule Todo.ServerTest do
   test ".delete_list deletes a list by its name" do
     Server.add_list("delete-me")
     list = Server.find_list("delete-me")
-
     Server.delete_list(list)
     counts = Supervisor.count_children(Server)
 
